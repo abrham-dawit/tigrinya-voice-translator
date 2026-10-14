@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tigrinya Voice Translator — type it, hear it, say it</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">🗣️ Tigrinya Voice Translator</div>
+    <nav>
+      <a href="#phrases">Phrasebook</a>
+      <a href="#typer">Voice typer</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Learning Tigrinya? Start by hearing it.</h1>
+    <p class="lede">A translator built for how people actually learn: a starter phrasebook of everyday Tigrinya and Amharic, a speaker button on every phrase so you can hear it, and a voice typer so you can practice saying things and see them written down. Made for the diaspora kids, the partners, the grandkids — anyone trying to hold a real conversation with family.</p>
+    <p class="starter-note">📖 Every entry below is a <strong>starter entry</strong> — the basics: greetings, thanks, yes/no, a few everyday words. Double-check spellings with a native speaker before you use them anywhere formal. Expanding and correcting this list with family is honestly part of the project.</p>
+  </section>
+
+  <section id="phrases" class="card">
+    <h2>Phrasebook</h2>
+    <input type="search" id="searchBox" placeholder="Search phrases… (try 'thank' or 'water')">
+    <div class="phrase-list" id="phraseList"></div>
+    <p class="voice-note" id="voiceNote"></p>
+  </section>
+
+  <section id="typer" class="card">
+    <h2>Voice typer + speaker</h2>
+    <p>Type anything below and press <strong>Hear it</strong> to have your browser read it out loud. Or press the mic and speak — if your browser supports speech recognition, it will type what it hears so you can practice pronunciation and compare. Recognition for Tigrinya/Amharic depends on your browser and device; English recognition works in Chrome.</p>
+    <label class="field"><span>Speaking language</span>
+      <select id="langSelect">
+        <option value="ti-ET">Tigrinya (ትግርኛ)</option>
+        <option value="am-ET">Amharic (አማርኛ)</option>
+        <option value="en-US">English</option>
+      </select>
+    </label>
+    <textarea id="typerBox" rows="3" placeholder="Type here, or press the mic and speak…"></textarea>
+    <div class="typer-actions">
+      <button class="btn-primary" id="speakBtn" type="button">🔊 Hear it</button>
+      <button class="btn-secondary" id="micBtn" type="button">🎤 Voice type</button>
+    </div>
+    <p class="typer-status" id="typerStatus"></p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap"><p>Tigrinya Voice Translator — a first working version of my voice translator idea. Plain HTML, CSS, and JavaScript, using your browser's built-in speech tools.</p></div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
